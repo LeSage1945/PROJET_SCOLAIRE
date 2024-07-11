@@ -5,10 +5,15 @@ import { EleveComponent } from './eleve/eleve.component';
 import { ActionEleveComponent } from './eleve/action-eleve/action-eleve.component';
 import { AgentComponent } from './agent/agent.component';
 import { ActionFamilleComponent } from './eleve/famille/action-famille/action-famille.component';
+import { FamilleComponent } from './eleve/famille/famille.component';
 
 const routes: Routes = [
   {path: 'eleve', component: EleveComponent},
+  {path: 'eleve/form', component: ActionEleveComponent},
+  {path: 'famille', component: FamilleComponent},
+  {path: 'famille/form', component: ActionFamilleComponent},
   {path: 'agent', component: AgentComponent},
+  
 ];
 
 @NgModule({
