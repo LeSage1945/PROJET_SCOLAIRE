@@ -1,0 +1,170 @@
+
+
+
+
+<mat-tab-group mat-stretch-tabs class="">
+    <mat-tab label="Informations Eleve">
+        <div class="container mt-4">
+            <div class="mat-elevation-z8">
+                <table mat-table [dataSource]="dataSource" class="table table-hover table-striped">
+              
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="Matricule">
+                    <th mat-header-cell *matHeaderCellDef> Matricule </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Matricule}} </td>
+                  </ng-container>
+              
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="Nom">
+                    <th mat-header-cell *matHeaderCellDef> Nom </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Nom}} </td>
+                  </ng-container>
+              
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="Prenom">
+                    <th mat-header-cell *matHeaderCellDef> Prenom </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Prenom}} </td>
+                  </ng-container>
+              
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="Sexe">
+                    <th mat-header-cell *matHeaderCellDef> Sexe </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Sexe}} </td>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="DateDeNaissance">
+                    <th mat-header-cell *matHeaderCellDef> Date De Naissance </th>
+                    <td mat-cell *matCellDef="let element"> {{element.DateDeNaissance}} </td>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="LieuDeNaissance">
+                    <th mat-header-cell *matHeaderCellDef> Lieu De Naissance </th>
+                    <td mat-cell *matCellDef="let element"> {{element.LieuDeNaissance}} </td>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="Nationalite">
+                    <th mat-header-cell *matHeaderCellDef> Nationalite </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Nationalite}} </td>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="Classe">
+                    <th mat-header-cell *matHeaderCellDef> Classe </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Classe}} </td>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="ACTIONS">
+                    <th mat-header-cell *matHeaderCellDef class="text-end text-center" style="width: 400px;">Actions</th>
+                    <td mat-cell *matCellDef="let element" class="text-end" style="padding-right: 50px">
+                      <button type="button" class="btn text-lowercase py-0 px-1 btn-primary px-2 py-1">
+                        voir<i class="fa fa-eye text-white mx-2" aria-hidden="true"></i>
+                      </button>
+                      <button type="button" class="btn text-lowercase py-0 px-1 btn-success mx-2 px-2 py-1">
+                        modifier<i class="fa fa-pencil text-white mx-2" aria-hidden="true"></i>
+                      </button>
+                      <button type="button" class="btn text-lowercase px-1 py-0 btn-danger px-2 py-1">
+                        supprimer<i class="fa fa-trash text-white mx-2" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                  </ng-container>
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+              
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]" aria-label="Select page of periodic elements"></mat-paginator>
+              </div>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Informations familliale">
+        <section class="mt-5 container" style="height: 130vh">
+            <h1 class="text-center"></h1>
+            <h1 class="text-center"></h1>
+            <h1 class="text-center"></h1>
+          
+            <section class="mt-4">
+              <form action="">
+                <div class="px-5 py-4 w-100" style="border-radius: 25px; background-color: #7bc9ff;">
+                    <div class="divEtabissement px-4 mb-4">
+                       <h2 class="">Information de l'eleve </h2>
+                       <div class="row">
+                        <p class="col-3">
+                            <label for="">Nom(s) et Prenom(s) du Tuteur</label>
+                            <input type="text" class="select form-control" placeholder="koukodila le sage"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Profession du Tuteur</label>
+                            <input type="text" class="select form-control" placeholder="developpeur"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Email du Tuteur</label>
+                            <input type="text" class="select form-control" placeholder="koukodilaexauce636@gmail.com"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Contact du Tuteur</label>
+                            <input type="text" class="select form-control" placeholder="+242 06 606 25 94"/>
+                        </p>
+                       </div>
+                       <div class="row">
+                        <p class="col-3">
+                            <label for="">Nom(s) et Prenom(s) du Pere</label>
+                            <input type="text" class="select form-control" placeholder="koukodila yannick"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Profession du Pere</label>
+                            <input type="text" class="select form-control" placeholder="developpeur"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Email du Pere</label>
+                            <input type="text" class="select form-control" placeholder="koukodilayannick123@gmail.com"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Contact du Pere</label>
+                            <input type="text" class="select form-control" placeholder="+242 06 806 05 94"/>
+                        </p>
+                       </div>
+                       <div class="row">
+                        <p class="col-3">
+                            <label for="">Nom(s) et Prenom(s) du Mere</label>
+                            <input type="text" class="select form-control" placeholder="koukodila exaucee"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Profession du Mere</label>
+                            <input type="text" class="select form-control" placeholder="developpeuse"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Email du Mere</label>
+                            <input type="text" class="select form-control" placeholder="koukodilaexaucee999@gmail.com"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Contact du Mere</label>
+                            <input type="text" class="select form-control" placeholder="+242 06 806 05 51"/>
+                        </p>
+                       </div>
+                       <div class="row">
+                        <p class="col-3">
+                            <label for="">Numero de frere</label>
+                            <input type="text" class="select form-control" placeholder="06"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Numero de soeur</label>
+                            <input type="text" class="select form-control" placeholder="06"/>
+                        </p>
+                        <p class="col-3">
+                            <label for="">Adresse</label>
+                            <input type="text" class="select form-control" placeholder="adresse"/>
+                        </p>
+                        <p class="col-3"></p>
+                       </div>
+                    </div>
+                </div>
+                <div class="mt-4" style="position: relative;">
+                        <button type="submit" class="btn form-control" style="color: white; position: absolute; right: 20px; width: 200px; background-color: #7bc9ff; border-radius: 15px;">Informations familliales</button>
+                        <button type="submit" class="btn btn-danger form-control" style=" position: absolute; left: 80px; width: 100px; border-radius: 15px;">Retour</button>
+                    </div>
+              </form>
+            </section>
+          </section>
+    </mat-tab>
+</mat-tab-group>
+  
