@@ -16,6 +16,9 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { AgentListeComponent } from './agent-liste/agent-liste.component';
+import { AgentActionComponent } from './agent-action/agent-action.component';
+import { AgentFormComponent } from './agent-form/agent-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
     ActionEleveComponent,
     ActionFamilleComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AgentListeComponent,
+    AgentActionComponent,
+    AgentFormComponent
   ],
   imports: [
     BrowserModule,

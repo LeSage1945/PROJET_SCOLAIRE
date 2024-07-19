@@ -1,0 +1,44 @@
+<div>
+    <div class="container mt-5">
+      <div>
+          <h1 class="text-center" style="font-weight: bold;">
+              Liste des agents
+          </h1>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th >Code agent</th>
+            <th >Nom</th>
+            <th >Prénom</th>
+            <th >Sexe</th>
+            <th >Adresse</th>
+            <th >Date de naissance</th>
+            <th >Lieu de naissance</th>
+            <th >Nationnalité</th>
+            <th >Fonction</th>
+            <th >Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dataSource of dataSources">
+            <td> {{dataSource.Matricule}} </td>
+            <td>{{dataSource.Nom}}</td>
+            <td>{{dataSource.Prenom}}</td>
+            <td>{{dataSource.Sexe}}</td>
+            <td>{{dataSource.Adresse}}</td>
+            <td>{{dataSource.DN}}</td>
+            <td>{{dataSource.LN}}</td>
+            <td>{{dataSource.Nationnalite}}</td>
+            <td>{{dataSource.Fonction}}</td>
+            <td class="action">
+                <button class="btn btn-primary">Voir</button>
+                <button class="btn btn-force">Modifier</button>
+                <button class="btn btn-danger">Supprimer</button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
